@@ -6,7 +6,8 @@ contract EtherValue {
 
     
     receive() external payable {
-        valueInWei += msg.value;
+        valueInWei = valueInWei + msg.value;
+
     }
 
     function getValueInWei() public view returns (uint256) {
